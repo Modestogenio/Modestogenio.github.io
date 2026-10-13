@@ -17,9 +17,7 @@
       --border-accent: #334155;
       --primary: #2563eb;
       --primary-light: #3b82f6;
-      --primary-glow: rgba(37, 99, 235, 0.25);
       --cyan: #06b6d4;
-      --cyan-glow: rgba(6, 182, 212, 0.2);
       --emerald: #10b981;
       --amber: #f59e0b;
       --text-main: #f8fafc;
@@ -560,12 +558,12 @@
       border: 1px solid var(--border-color);
     }
 
-    /* CERTIFICATE CREDENTIAL CARDS */
+    /* CERTIFICATE CREDENTIAL CARDS (100% FACTUAL & TECHNICAL - NO SIMULATED DIPLOMAS) */
     .cert-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 3px;
-      padding: 20px;
+      padding: 20px 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -578,8 +576,8 @@
     }
     .cert-card-header {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-items: flex-start;
+      gap: 14px;
       margin-bottom: 12px;
     }
     .cert-badge-icon {
@@ -595,7 +593,7 @@
       font-size: 20px;
     }
     .cert-title {
-      font-size: 14.5px;
+      font-size: 15px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.35;
@@ -605,161 +603,36 @@
       font-size: 11.5px;
       color: var(--cyan);
       margin-top: 2px;
+      font-weight: 500;
     }
     .cert-body {
       font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      line-height: 1.5;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+      line-height: 1.55;
       text-align: justify;
     }
-    .cert-footer {
+    .cert-meta {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: auto;
       padding-top: 12px;
       border-top: 1px solid var(--border-color);
       font-family: var(--font-mono);
       font-size: 11px;
     }
-    .cert-status {
-      color: var(--emerald);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    /* MODAL DIPLOMA VIEWER */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(4, 7, 13, 0.88);
-      backdrop-filter: blur(5px);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .modal-overlay.active {
-      display: flex;
-      animation: modalFadeIn 0.2s ease;
-    }
-    @keyframes modalFadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .modal-box {
-      background: #0b1322;
-      border: 2px solid var(--cyan);
-      border-radius: 4px;
-      max-width: 720px;
-      width: 100%;
-      box-shadow: 0 0 40px rgba(6, 182, 212, 0.35);
-      position: relative;
-      overflow: hidden;
-    }
-    .modal-header {
-      background: #0f1a2e;
-      border-bottom: 1px solid var(--border-color);
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--cyan);
-    }
-    .modal-close {
-      background: transparent;
+    .cert-pill {
+      background: rgba(15, 23, 42, 0.8);
       border: 1px solid var(--border-accent);
-      color: #ffffff;
-      padding: 4px 10px;
-      cursor: pointer;
-      font-family: var(--font-mono);
-      font-size: 12px;
+      color: #94a3b8;
+      padding: 2px 7px;
       border-radius: 2px;
     }
-    .modal-close:hover {
-      background: #ef4444;
-      border-color: #ef4444;
-    }
-
-    /* DIPLOMA SHEET INSIDE MODAL */
-    .diploma-sheet {
-      padding: 36px 32px;
-      background: linear-gradient(135deg, #0e172a 0%, #0a1120 100%);
-      border: 8px double #1e293b;
-      margin: 16px;
-      position: relative;
-      text-align: center;
-    }
-    .diploma-crest {
-      font-size: 38px;
-      margin-bottom: 8px;
-    }
-    .diploma-entity {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 700;
-      color: #93c5fd;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .diploma-subentity {
-      font-size: 12px;
-      color: var(--text-dim);
-      margin-bottom: 18px;
-    }
-    .diploma-presents {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .diploma-recipient {
-      font-size: 24px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid var(--border-accent);
-      display: inline-block;
-      padding-bottom: 4px;
-      margin-bottom: 14px;
-    }
-    .diploma-course {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--cyan);
-      margin-bottom: 12px;
-    }
-    .diploma-details {
-      font-size: 13px;
-      color: #cbd5e1;
-      max-width: 520px;
-      margin: 0 auto 24px;
-      line-height: 1.5;
-    }
-    .diploma-grid {
-      display: flex;
-      justify-content: space-around;
-      border-top: 1px solid rgba(51, 65, 85, 0.6);
-      padding-top: 18px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-align: left;
-    }
-    .diploma-field strong {
-      color: #94a3b8;
-      display: block;
-      font-size: 10px;
-      text-transform: uppercase;
-    }
-    .diploma-field span {
-      color: #f8fafc;
-      font-weight: 600;
+    .cert-pill.verified {
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.08);
     }
 
     /* TOAST */
@@ -817,10 +690,6 @@
       .role-title {
         flex-direction: column;
         align-items: flex-start;
-      }
-      .diploma-grid {
-        flex-direction: column;
-        gap: 10px;
       }
     }
   </style>
@@ -909,7 +778,7 @@
         🎓 Formación Académica
       </button>
       <button class="tab-btn" onclick="switchTab('tab-certificaciones', this)">
-        🏅 Certificaciones & Diplomas <span class="badge-count">Verificables</span>
+        🏅 Certificaciones Oficiales <span class="badge-count">Acreditadas</span>
       </button>
     </nav>
 
@@ -966,7 +835,7 @@
           <ul class="duty-list">
             <li><strong>Departamento de Tesorería Institucional – Dirección de Finanzas (Dic. 2024 – Abr. 2025):</strong> Encargado de la Oficina de Atención al Cliente / Personal; custodia y control de información confidencial de beneficios económicos, desahucios, montepíos y remuneraciones. Cumplimiento de estándares de seguridad de la información (ISO 27001).</li>
             <li><strong>Escuela de Adiestramiento Canino (2022 – 2024):</strong> Instructor educador canino; instrucción técnica de guías y certificación de binomios detectores de sustancias ilícitas; <strong>Graduado con Distinción Primer Lugar Nacional de la promoción 2022</strong>.</li>
-            <li><strong>Departamento Antidrogas OS7 (Jefaturas Especializadas, 2016 – 2021):</strong> Interceptación telefónica judicial autorizada (sistema EGO); peritaje de sustancias con espectrómetro Raman Trunarc; análisis forense de telefonía móvil (Cellebrite UFED); mapeo de organizaciones criminales con IBM i2 Analyst's Notebook; procesamiento de datos operativos (SISDRO) y confección de informes periciales.</li>
+            <li><strong>Departamento Antidrogas OS7 (Jefaturas Especializadas, 2016 – 2021):</strong> Interceptación telefónica judicial autorizada (sistema EGO); peritaje de sustancias con espectrómetro Raman Trunarc; análisis forense de telefonía móvil como <strong>UFED Physical Analyst (Cellebrite CCPA)</strong>; mapeo de organizaciones criminales con IBM i2 Analyst's Notebook; procesamiento de datos operativos (SISDRO) y confección de informes periciales.</li>
             <li><strong>Co-desarrollo UX Software SISDRO (2020):</strong> Referente de experiencia de usuario (UX), detección de fallas y estructuración de datos operativos en equipo multidisciplinario junto a ingenieros informáticos del OS7 y analistas estadísticos de la Dirección de Control Drogas.</li>
             <li><strong>OS7 Sección Iquique – Macrozona Norte (2008 – 2015):</strong> Operaciones de interdicción en los tres anillos de control (fronterizo, carretero y urbano); uso de tecnología especializada: cámaras térmicas, visores nocturnos, fibroscopios y densímetros.</li>
             <li><strong>3ª Comisaría Alto Hospicio (2006 – 2008):</strong> Servicios policiales de orden y seguridad operativa y patrullaje preventivo en población.</li>
@@ -1266,36 +1135,38 @@
     </div>
 
     <!-- =================================================================== -->
-    <!-- TAB 5: CERTIFICACIONES CON DIPLOMAS DIGITALES VERIFICABLES          -->
+    <!-- TAB 5: CERTIFICACIONES Y ESPECIALIZACIONES TÉCNICAS (100% REALES)   -->
     <!-- =================================================================== -->
     <div id="tab-certificaciones" class="tab-content">
       <div class="section-card">
         <div class="card-header">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          Certificaciones Oficiales & Credenciales Digitales (Haz clic en Ver Diploma)
+          Certificaciones Especializadas y Cursos Oficiales Acreditados
         </div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">
+          Registro de especializaciones técnicas, peritajes forenses y acreditaciones oficiales con respaldo curricular.
+        </p>
 
         <div class="grid-2">
           
-          <!-- CERT 1: CELLEBRITE CCPA -->
+          <!-- CERT 1: UFED PHYSICAL ANALYST -->
           <div class="cert-card">
             <div>
               <div class="cert-card-header">
                 <div class="cert-badge-icon">📱</div>
                 <div>
-                  <h4 class="cert-title">Cellebrite Certified Physical Analyst (CCPA)</h4>
+                  <h4 class="cert-title">UFED Physical Analyst (Cellebrite Certified Physical Analyst - CCPA)</h4>
                   <div class="cert-issuer">Cellebrite Mobile Forensics · 2021</div>
                 </div>
               </div>
               <p class="cert-body">
-                Certificación internacional en análisis forense digital, extracción física, decodificación y recuperación de evidencias en dispositivos móviles y telefonía inteligente.
+                Certificación técnica en análisis forense digital y decodificación física de datos en dispositivos móviles. Especialización en extracción física de memorias flash (UFED), recuperación de registros borrados, bases de datos SQLite y preservación pericial de evidencias.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ VERIFICABLE</span>
-              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('cellebrite')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ ESPECIALIDAD FORENSE</span>
+              <span class="cert-pill">UFED / CELLEBRITE</span>
+              <span class="cert-pill">AÑO 2021</span>
             </div>
           </div>
 
@@ -1305,19 +1176,18 @@
               <div class="cert-card-header">
                 <div class="cert-badge-icon">🕸️</div>
                 <div>
-                  <h4 class="cert-title">IBM i2 Analyst's Notebook</h4>
-                  <div class="cert-issuer">BeSmart Chile / IBM Authorized · 2020</div>
+                  <h4 class="cert-title">IBM i2 Analyst's Notebook - Visualización de Redes</h4>
+                  <div class="cert-issuer">BeSmart Chile / IBM Authorized Training · 2020</div>
                 </div>
               </div>
               <p class="cert-body">
-                Estructuración de redes criminales, análisis de vínculos relacionales, trazas patrimoniales complejas y diagramas periciales de inteligencia criminal.
+                Capacitación en análisis e inteligencia delictual. Estructuración gráfica de redes criminales, cruces masivos de comunicaciones telefónicas, trazas financieras patrimoniales, diagramas de asociación y líneas de tiempo para investigaciones operativas complejas.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ VERIFICABLE</span>
-              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('ibmi2')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ INTELIGENCIA OPERATIVA</span>
+              <span class="cert-pill">IBM i2 NOTEBOOK</span>
+              <span class="cert-pill">AÑO 2020</span>
             </div>
           </div>
 
@@ -1327,19 +1197,18 @@
               <div class="cert-card-header">
                 <div class="cert-badge-icon">🥇</div>
                 <div>
-                  <h4 class="cert-title">Distinción Primer Lugar Nacional K9</h4>
-                  <div class="cert-issuer">Dirección de Educación de Carabineros · 2022</div>
+                  <h4 class="cert-title">Instructor Mención Educación Canina de Perros Detectores</h4>
+                  <div class="cert-issuer">Dirección de Educación de Carabineros · Escuela de Adiestramiento Canino · 2022</div>
                 </div>
               </div>
               <p class="cert-body">
-                Primer Lugar Nacional en la promoción del Curso de Instructor Mención Educación Canina de Perros Detectores de Drogas y Sustancias Ilícitas.
+                <strong>Graduado con Distinción Primer Lugar Nacional de la promoción 2022.</strong> Formación técnica en condicionamiento operante, fijación olfativa de alcaloides y sintéticos, adiestramiento de perros detectores y certificación de binomios K9 para control de fronteras y seguridad corporativa.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ MÁXIMA DISTINCIÓN</span>
-              <button class="btn btn-primary" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('k9')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ 1ER LUGAR NACIONAL</span>
+              <span class="cert-pill">INSTRUCTOR K9</span>
+              <span class="cert-pill">AÑO 2022</span>
             </div>
           </div>
 
@@ -1349,19 +1218,18 @@
               <div class="cert-card-header">
                 <div class="cert-badge-icon">🎓</div>
                 <div>
-                  <h4 class="cert-title">Técnico Nivel Superior en Prevención e Investigación</h4>
-                  <div class="cert-issuer">Escuela de Suboficiales · Reg. Mineduc 2016</div>
+                  <h4 class="cert-title">Técnico de Nivel Superior en Prevención e Investigación Policial</h4>
+                  <div class="cert-issuer">Escuela de Suboficiales de Carabineros de Chile · Reg. Oficial Mineduc · 2016</div>
                 </div>
               </div>
               <p class="cert-body">
-                Título técnico superior otorgado por la Dirección de Educación y reconocido por el Mineduc. Graduado con Distinción en materias procesales y periciales.
+                Título técnico superior oficial reconocido por el Ministerio de Educación. Formación intensiva en Derecho Procesal Penal (Arts. 129 y 130 CPP), criminalística de campo, peritajes forenses, cadena de custodia de evidencias y administración de la seguridad pública.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ TÍTULO OFICIAL</span>
-              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('suboficial')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ TÍTULO SUPERIOR MINEDUC</span>
+              <span class="cert-pill">GRADUADO CON DISTINCIÓN</span>
+              <span class="cert-pill">2015 – 2016</span>
             </div>
           </div>
 
@@ -1371,19 +1239,18 @@
               <div class="cert-card-header">
                 <div class="cert-badge-icon">🛡️</div>
                 <div>
-                  <h4 class="cert-title">Prevención de Riesgos & Conducción Defensiva</h4>
-                  <div class="cert-issuer">Mutual de Seguridad CChC · Vigencia 2026</div>
+                  <h4 class="cert-title">Prevención de Accidentes Laborales & Conducción Defensiva</h4>
+                  <div class="cert-issuer">Mutual de Seguridad CChC · Certificaciones Vigentes 2026</div>
                 </div>
               </div>
               <p class="cert-body">
-                Certificaciones corporativas oficiales en 'Prevención de Accidentes Laborales' y 'Técnicas de Manejo Defensivo y Transporte Seguro en Terreno'.
+                Acreditación en prevención de riesgos ocupacionales, identificación de condiciones subestándar en recintos comerciales y logísticos, protocolos de respuesta ante incidentes críticos y conducción defensiva táctica en vehículos institucionales y de terreno.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ VIGENTE 2026</span>
-              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('mutual')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ ACREDITACIÓN VIGENTE</span>
+              <span class="cert-pill">SEGURIDAD LABORAL</span>
+              <span class="cert-pill">AÑO 2026</span>
             </div>
           </div>
 
@@ -1393,64 +1260,42 @@
               <div class="cert-card-header">
                 <div class="cert-badge-icon">🔬</div>
                 <div>
-                  <h4 class="cert-title">Espectrometría Raman Molecular Trunarc</h4>
-                  <div class="cert-issuer">Thermo Fisher Scientific / OS7 · 2018</div>
+                  <h4 class="cert-title">Operador Espectrometría Raman Molecular Trunarc</h4>
+                  <div class="cert-issuer">Thermo Fisher Scientific / Departamento OS7 · 2018</div>
                 </div>
               </div>
               <p class="cert-body">
-                Certificación en operación de espectrómetro molecular Raman para análisis no destructivo e identificación in situ de sustancias químicas controladas.
+                Capacitación especializada en la operación de espectrómetro molecular Raman portátil. Identificación química inmediata no destructiva in situ de sustancias controladas, precursores químicos y agentes de corte en operativos de interdicción sin apertura de empaques.
               </p>
             </div>
-            <div class="cert-footer">
-              <span class="cert-status">✓ CERTIFICADO</span>
-              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="openDiploma('trunarc')">
-                [ VER DIPLOMA ]
-              </button>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ OPERADOR ESPECIALIZADO</span>
+              <span class="cert-pill">ANÁLISIS ESPECTROMÉTRICO</span>
+              <span class="cert-pill">AÑO 2018</span>
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
+          <!-- CERT 7: INVESTIGADOR EN DROGAS -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-card-header">
+                <div class="cert-badge-icon">🔍</div>
+                <div>
+                  <h4 class="cert-title">Curso Investigador en Drogas y Estupefacientes</h4>
+                  <div class="cert-issuer">Dirección de Control Drogas · Carabineros de Chile · 2009</div>
+                </div>
+              </div>
+              <p class="cert-body">
+                Especialidad policial en técnicas de investigación criminal aplicadas al combate del narcotráfico y crimen organizado: vigilancia encubierta, interceptación legal, levantamiento de evidencias, cadena de custodia y redacción de partes policiales para tribunales de justicia.
+              </p>
+            </div>
+            <div class="cert-meta">
+              <span class="cert-pill verified">✓ ESPECIALIDAD POLICIAL</span>
+              <span class="cert-pill">INVESTIGACIÓN ANTINARCÓTICOS</span>
+              <span class="cert-pill">AÑO 2009</span>
+            </div>
+          </div>
 
-    <!-- =================================================================== -->
-    <!-- INTERACTIVE DIPLOMA MODAL VIEWER                                    -->
-    <!-- =================================================================== -->
-    <div id="diplomaModal" class="modal-overlay" onclick="closeDiploma(event)">
-      <div class="modal-box" onclick="event.stopPropagation()">
-        <div class="modal-header">
-          <span id="modalHeaderTitle">CREDENCIAL TÉCNICA OFICIAL // REGISTRO VERIFICABLE</span>
-          <button class="modal-close" onclick="closeDiploma()">[ CERRAR ✕ ]</button>
-        </div>
-        
-        <div class="diploma-sheet">
-          <div class="diploma-crest" id="diplomaCrest">🎖️</div>
-          <div class="diploma-entity" id="diplomaEntity">ORGANISMO EMISOR</div>
-          <div class="diploma-subentity" id="diplomaSubEntity">DIRECCIÓN TÉCNICA DE ACREDITACIÓN</div>
-          
-          <div class="diploma-presents">CERTIFICA QUE</div>
-          <div class="diploma-recipient">MARCELO JAVIER CORALES TOBAR</div>
-          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); margin-bottom: 14px;">R.U.T. 16.411.916-5</div>
-          
-          <div class="diploma-course" id="diplomaCourse">NOMBRE DEL CURSO O CERTIFICACIÓN</div>
-          <div class="diploma-details" id="diplomaDetails">
-            Descripción de competencias técnicas adquiridas, régimen de evaluación y validación para el ejercicio pericial y operativo.
-          </div>
-          
-          <div class="diploma-grid">
-            <div class="diploma-field">
-              <strong>FOLIO / REGISTRO:</strong>
-              <span id="diplomaFolio">CL-SEC-2022-0941</span>
-            </div>
-            <div class="diploma-field">
-              <strong>DISTINCIÓN / ESTADO:</strong>
-              <span id="diplomaGrade">APROBADO CON DISTINCIÓN</span>
-            </div>
-            <div class="diploma-field">
-              <strong>FECHA EMISIÓN:</strong>
-              <span id="diplomaDate">OCTUBRE 2022</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1480,93 +1325,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
-
-    // Diploma definitions for modal
-    const diplomas = {
-      cellebrite: {
-        crest: "📱",
-        entity: "CELLEBRITE ACADEMY",
-        subEntity: "DIGITAL FORENSICS & INCIDENT INVESTIGATION DIVISION",
-        course: "CELLEBRITE CERTIFIED PHYSICAL ANALYST (CCPA)",
-        details: "Acreditación técnica en metodologías forenses avanzadas para extracción física de memorias flash, desencriptado de bases de datos de mensajería (WhatsApp, Telegram), recuperación de registros borrados y presentación de informes periciales admisibles en sede judicial.",
-        folio: "CCPA-CL-884102-FORENSIC",
-        grade: "CERTIFIED PHYSICAL ANALYST",
-        date: "DICIEMBRE 2021"
-      },
-      ibmi2: {
-        crest: "🕸️",
-        entity: "BESMART CHILE · IBM ANALYTICS PARTNER",
-        subEntity: "DIVISIÓN DE INTELIGENCIA Y SEGURIDAD",
-        course: "IBM i2 ANALYST'S NOTEBOOK - ANÁLISIS DE REDES DELICTUALES",
-        details: "Certificación en visualización gráfica de estructuras criminales, cruces de llamadas telefónicas, diagramas de flujo financiero patrimonial, matrices de asociación y análisis temporal para operaciones especiales de interdicción.",
-        folio: "BESMART-IBM-I2-2020-0931",
-        grade: "APROBADO CON MÉRITO",
-        date: "NOVIEMBRE 2020"
-      },
-      k9: {
-        crest: "🥇",
-        entity: "DIRECCIÓN DE EDUCACIÓN DE CARABINEROS",
-        subEntity: "ESCUELA DE ADIESTRAMIENTO CANINO INSTITUCIONAL",
-        course: "CURSO DE INSTRUCTOR MENCIÓN EDUCACIÓN CANINA DE PERROS DETECTORES",
-        details: "Otorgado con la MÁXIMA DISTINCIÓN y PRIMER LUGAR NACIONAL de la Promoción 2022. Especialidad en condicionamiento operante, discriminación olfativa de alcaloides y sintéticos, diseño de pistas de entrenamiento y certificación de binomios K9 para control fronterizo y corporativo.",
-        folio: "EAC-K9-DISTINCION-1ER-LUGAR-2022",
-        grade: "PRIMER LUGAR NACIONAL (DISTINCIÓN MÁXIMA)",
-        date: "NOVIEMBRE 2022"
-      },
-      suboficial: {
-        crest: "🎓",
-        entity: "ESCUELA DE SUBOFICIALES DE CARABINEROS",
-        subEntity: "DIRECCIÓN DE EDUCACIÓN · REGISTRO OFICIAL MINEDUC",
-        course: "TÉCNICO DE NIVEL SUPERIOR EN PREVENCIÓN E INVESTIGACIÓN POLICIAL",
-        details: "Título Técnico de Nivel Superior reconocido por el Ministerio de Educación. Formación intensiva en Derecho Procesal Penal (Arts. 129 y 130 CPP), criminalística de campo, cadena de custodia, peritajes forenses y liderazgo operativo en seguridad.",
-        folio: "MINEDUC-ESUSCAR-TNS-2016-0814",
-        grade: "GRADUADO CON DISTINCIÓN",
-        date: "DICIEMBRE 2016"
-      },
-      mutual: {
-        crest: "🛡️",
-        entity: "MUTUAL DE SEGURIDAD CChC",
-        subEntity: "PROGRAMA NACIONAL DE PREVENCIÓN DE RIESGOS LABORALES",
-        course: "PREVENCIÓN DE ACCIDENTES LABORALES & CONDUCCIÓN DEFENSIVA SEGURA",
-        details: "Certificación técnica en identificación de peligros en instalaciones operativas, protocolos de evacuación, primeros auxilios en incidentes con violencia, y conducción defensiva táctica en vehículos institucionales y de terreno.",
-        folio: "MUTUAL-CCHC-VIGENTE-2026-993",
-        grade: "ACREDITACIÓN COMPLETA VIGENTE",
-        date: "ENERO 2026 (VIGENCIA 2026)"
-      },
-      trunarc: {
-        crest: "🔬",
-        entity: "THERMO FISHER SCIENTIFIC / DEPTO. OS7",
-        subEntity: "DIVISIÓN TÉCNICA DE IDENTIFICACIÓN QUÍMICA",
-        course: "ESPECTROMETRÍA RAMAN MOLECULAR TRUNARC",
-        details: "Calificación técnica para la operación de espectrómetro molecular portátil con haz láser Raman. Análisis no destructivo in situ de estupefacientes, precursores químicos y corte de sustancias controladas sin contacto físico.",
-        folio: "TF-RAMAN-OS7-TRUNARC-2018",
-        grade: "OPERADOR TÉCNICO AUTORIZADO",
-        date: "AGOSTO 2018"
-      }
-    };
-
-    function openDiploma(key) {
-      const d = diplomas[key];
-      if (!d) return;
-      document.getElementById('diplomaCrest').textContent = d.crest;
-      document.getElementById('diplomaEntity').textContent = d.entity;
-      document.getElementById('diplomaSubEntity').textContent = d.subEntity;
-      document.getElementById('diplomaCourse').textContent = d.course;
-      document.getElementById('diplomaDetails').textContent = d.details;
-      document.getElementById('diplomaFolio').textContent = d.folio;
-      document.getElementById('diplomaGrade').textContent = d.grade;
-      document.getElementById('diplomaDate').textContent = d.date;
-      document.getElementById('diplomaModal').classList.add('active');
-    }
-
-    function closeDiploma(e) {
-      document.getElementById('diplomaModal').classList.remove('active');
-    }
-
-    // Close modal on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeDiploma();
-    });
 
     // Copy contact with feedback
     function copyContact(text, message) {
